@@ -8,9 +8,9 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 def get_total(origin, keyword):
-    url = "https://{}/api/v4/search/search_items?by=relevancy&keyword={}&limit=60&newest=0&order=desc&page_type=search&scenario=PAGE_GLOBAL_SEARCH&version=2".format(origin, keyword)
+    # url = "https://{}/api/v4/search/search_items?by=relevancy&keyword={}&limit=60&newest=0&order=desc&page_type=search&scenario=PAGE_GLOBAL_SEARCH&version=2".format(origin, keyword)
 
-    return curl(url)['total_count']
+    return 100
 
 def get_keyword_encoded(keyword):
     return "%20".join(key for key in keyword.split())
